@@ -1,0 +1,36 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{acmusal}
+
+% XeLaTeX is required to compile. Throws an error if another engine is being used
+\RequirePackage{ifxetex}
+\RequireXeTeX
+
+% Language settings
+\RequirePackage[spanish]{babel}
+\selectlanguage{spanish}
+
+\RequirePackage{graphicx}
+
+% ACM colours
+\RequirePackage{xcolor}
+\definecolor{acmblue}{RGB}{1,130,172}
+\definecolor{acmblack}{RGB}{0,0,0}
+\definecolor{acmwhite}{RGB}{255,255,255}
+\definecolor{acmyellow}{RGB}{255,214,0}
+\definecolor{acmorange}{RGB}{252,146,0}
+\definecolor{acmred}{RGB}{253,27,20}
+\definecolor{acmlightblue}{RGB}{131,206,226}
+\definecolor{acmgreen}{RGB}{166,188,9}
+\definecolor{acmpurple}{RGB}{101,1,107}
+\definecolor{acmdarkblue}{RGB}{9,53,122}
+
+% Bold and italics go in blue
+\DeclareTextFontCommand{\textbf}{\color{acmblue}}
+\DeclareTextFontCommand{\textit}{\color{acmblue}}
+
+% Fonts
+\RequirePackage{fontspec}
+\setmainfont{Myriad Pro}
+
+\newcommand{\acmchaptername}[1]{\def\@acmchaptername{#1}}
+\newcommand*{\authors}[1]{\def\@authornames{#1}}
